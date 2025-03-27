@@ -4,6 +4,9 @@ return {
   config = function()
     require('cmake-tools').setup {
       cmake_soft_link_compile_commands = 1,
+      cmake = {
+        generator = 'Ninja',
+      },
     }
 
     vim.keymap.set('n', '<leader>cg', '<Cmd>CMakeGenerate<CR>')
